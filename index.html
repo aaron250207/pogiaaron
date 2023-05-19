@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>DISPO JJ - Stock Management System</title>
+</head>
+<body>
+  <section id="introSection">
+    <h1>DISPO JJ</h1>
+    <button id="startButton">Proceed</button>
+  </section>
+
+  <section id="loginSection" class="hidden">
+    <h2>Login</h2>
+    <form id="loginForm">
+      <label for="username">Username:</label>
+      <input type="text" id="username" required>
+      <label for="password">Password:</label>
+      <input type="password" id="password" required>
+      <button type="submit">Login</button>
+    </form>
+  </section>
+
+  <section id="dashboardSection" class="hidden">
+    <h2>NAVIGATE YOUR SALES</h2>
+    <p>Total Earnings: ₱<span id="totalEarnings">0.00</span></p>
+    <p>Total Loan: ₱<span id="totalLoan">0.00</span></p>
+    <button id="logoutButton">Logout</button>
+    <button id="stocksButton">CLICK ME!</button>
+  </section>
+
+  <section id="stocksSection" class="hidden">
+    <h2> </h2>
+    <button id="stocksBackButton">Back</button>
+    <form id="stocksForm">
+      <label for="itemName">Item Type/Name:</label>
+      <input type="text" id="itemName" required>
+      <label for="itemPrice">Price:</label>
+      <input type="number" id="itemPrice" step="0.01" required>
+      <label for="customerName">Customer Name:</label>
+      <input type="text" id="customerName" required>
+      <button id="addItemButton">Add Item</button>
+    </form>
+    <ul id="stocksList"></ul>
+    <button id="clearItemsButton">Delete all items</button>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
